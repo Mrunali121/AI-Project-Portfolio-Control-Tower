@@ -1,0 +1,25 @@
+resource_id,name,role,department,capacity_fte
+R01,Lena Hartmann,Programme Manager,PMO,1.0
+R02,Tobias Weiss,Senior Developer,IT,1.0
+R03,Mira Kovacs,Business Analyst,IT,1.0
+R04,Jonas Keller,Database Administrator,IT,1.0
+R05,Sofia Lindqvist,Cloud Architect,IT,1.0
+R06,Daniel Okafor,QA Lead,IT,1.0
+R07,Aylin Demir,Security Engineer,IT,1.0
+R08,Felix Brandt,Developer,IT,1.0
+R09,Nora Schulz,Developer,IT,1.0
+R10,Marco Rossi,Integration Engineer,IT,1.0
+R11,Hannah Vogel,UX Designer,IT,1.0
+R12,Ivan Petrov,Data Engineer,IT,1.0
+R13,Clara Fischer,Data Scientist,IT,0.8
+R14,Emre Yilmaz,Project Manager,PMO,1.0
+R15,Julia Neumann,Project Manager,PMO,1.0
+R16,Paul Richter,Change Manager,PMO,1.0
+R17,Sara Haddad,Legal Counsel,Legal,1.0
+R18,Leon Wagner,Infrastructure Engineer,IT,1.0
+R19,Mia Becker,Marketing Specialist,Marketing,0.8
+R20,Oskar Lang,Developer,IT,1.0
+R21,Eva Maier,Finance Analyst,Finance,1.0
+R22,Karim Aziz,NLP Engineer,IT,1.0
+R23,Greta Hoffmann,Test Engineer,IT,1.0
+R24,Anna Köhler,Project Manager,PMO,1.0

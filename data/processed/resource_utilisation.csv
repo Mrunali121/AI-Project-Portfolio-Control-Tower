@@ -1,0 +1,25 @@
+resource_id,name,role,department,capacity_fte,allocation_fte,utilisation_pct,status,projects
+R01,Lena Hartmann,Programme Manager,PMO,1.0,1.1,110.0,Stretched,3
+R02,Tobias Weiss,Senior Developer,IT,1.0,1.1,110.0,Stretched,2
+R03,Mira Kovacs,Business Analyst,IT,1.0,1.0,100.0,OK,3
+R04,Jonas Keller,Database Administrator,IT,1.0,1.4000000000000001,140.0,Over-allocated,4
+R05,Sofia Lindqvist,Cloud Architect,IT,1.0,1.2,120.0,Over-allocated,3
+R06,Daniel Okafor,QA Lead,IT,1.0,1.1,110.0,Stretched,4
+R07,Aylin Demir,Security Engineer,IT,1.0,1.0999999999999999,110.0,Stretched,3
+R08,Felix Brandt,Developer,IT,1.0,1.0,100.0,OK,2
+R09,Nora Schulz,Developer,IT,1.0,1.0,100.0,OK,1
+R10,Marco Rossi,Integration Engineer,IT,1.0,1.2,120.0,Over-allocated,3
+R11,Hannah Vogel,UX Designer,IT,1.0,1.2,120.0,Over-allocated,4
+R12,Ivan Petrov,Data Engineer,IT,1.0,1.2000000000000002,120.0,Over-allocated,2
+R13,Clara Fischer,Data Scientist,IT,0.8,0.8,100.0,OK,1
+R14,Emre Yilmaz,Project Manager,PMO,1.0,0.9,90.0,OK,2
+R15,Julia Neumann,Project Manager,PMO,1.0,1.0,100.0,OK,3
+R16,Paul Richter,Change Manager,PMO,1.0,1.0,100.0,OK,4
+R17,Sara Haddad,Legal Counsel,Legal,1.0,0.9,90.0,OK,2
+R18,Leon Wagner,Infrastructure Engineer,IT,1.0,0.8999999999999999,90.0,OK,2
+R19,Mia Becker,Marketing Specialist,Marketing,0.8,0.8,100.0,OK,1
+R20,Oskar Lang,Developer,IT,1.0,1.0,100.0,OK,3
+R21,Eva Maier,Finance Analyst,Finance,1.0,0.8999999999999999,90.0,OK,2
+R22,Karim Aziz,NLP Engineer,IT,1.0,0.9,90.0,OK,1
+R23,Greta Hoffmann,Test Engineer,IT,1.0,0.8999999999999999,90.0,OK,3
+R24,Anna Köhler,Project Manager,PMO,1.0,1.5,150.0,Over-allocated,4

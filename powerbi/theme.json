@@ -1,0 +1,26 @@
+{
+  "name": "Control Tower",
+  "dataColors": ["#2A78D6", "#B8650A", "#6A5ACD", "#2E9E8F", "#E34948", "#76766F", "#8FB8EA", "#D9A441"],
+  "background": "#FFFFFF",
+  "foreground": "#1A1A19",
+  "tableAccent": "#2A78D6",
+  "good": "#0CA30C",
+  "neutral": "#FAB219",
+  "bad": "#D03B3B",
+  "maximum": "#2A78D6",
+  "center": "#E4E4E0",
+  "minimum": "#B8D4F5",
+  "textClasses": {
+    "callout": { "fontSize": 40, "fontFace": "Segoe UI Semibold", "color": "#1A1A19" },
+    "title":   { "fontSize": 14, "fontFace": "Segoe UI Semibold", "color": "#1A1A19" },
+    "header":  { "fontSize": 12, "fontFace": "Segoe UI Semibold", "color": "#52524F" },
+    "label":   { "fontSize": 11, "fontFace": "Segoe UI", "color": "#52524F" }
+  },
+  "visualStyles": {
+    "*": { "*": {
+      "background": [{ "color": { "solid": { "color": "#FFFFFF" } }, "transparency": 0 }],
+      "border": [{ "color": { "solid": { "color": "#E4E4E0" } }, "show": true, "radius": 8 }],
+      "title": [{ "show": true, "fontColor": { "solid": { "color": "#1A1A19" } }, "fontSize": 13 }]
+    } }
+  }
+}

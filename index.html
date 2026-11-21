@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Project Portfolio Control Tower</title>
+  <meta name="description" content="Executive dashboard for a portfolio of 15 IT projects: health score, budget and schedule variance, risks and issues, resource utilisation and AI-written recommendations. Synthetic data.">
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-in">
+    <div>
+      <h1>AI Project Portfolio Control Tower</h1>
+      <p class="sub">15 IT projects · status as of <span id="asof"></span> · <strong>synthetic data</strong> for a fictional company</p>
+    </div>
+    <div class="top-actions">
+      <a class="btn" href="https://github.com/Mrunali121/ai-portfolio-control-tower">GitHub repo</a>
+      <button class="btn" id="theme" type="button" aria-label="Toggle light and dark theme">Theme</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap" id="main">
+  <section class="kpis" id="kpis" aria-label="Portfolio KPIs"></section>
+
+  <section class="card" aria-labelledby="t-h">
+    <div class="row-head">
+      <h2 id="t-h">Project portfolio</h2>
+      <div class="filters">
+        <div class="chips" role="group" aria-label="Filter by status" id="chips"></div>
+        <label class="sel">Department <select id="dept"></select></label>
+      </div>
+    </div>
+    <p class="hint">Click a project to see why it has its status. Lowest health first.</p>
+    <div class="table-wrap">
+      <table id="tbl">
+        <thead><tr>
+          <th data-k="project_id">ID</th><th data-k="name">Project</th><th data-k="department">Department</th>
+          <th data-k="rag">Status</th><th data-k="health_score">Health</th><th data-k="spi">SPI</th><th data-k="cpi">CPI</th>
+          <th data-k="slip_days">Slip (days)</th><th data-k="forecast_overrun_pct">Cost overrun</th>
+        </tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="card detail" id="detail" aria-live="polite" aria-labelledby="d-h"></section>
+
+  <section class="grid2">
+    <div class="card"><h2>Budget variance</h2><p class="hint">Forecast cost at completion vs budget. Positive = overrun.</p><ul class="bars" id="bud"></ul></div>
+    <div class="card"><h2>Schedule variance</h2><p class="hint">Forecast finish vs planned finish, in days, at the current pace.</p><ul class="bars" id="sch"></ul></div>
+    <div class="card"><h2>Risk heat map</h2><p class="hint">Open risks by probability and impact. Hover a cell for the risks in it.</p><div id="heat"></div></div>
+    <div class="card"><h2>Highest-scoring open RAID items</h2><p class="hint">Risk = probability x impact; issue = severity x 5. Closed items excluded.</p><ul class="raid-list" id="topraid"></ul></div>
+    <div class="card wide"><h2>Resource utilisation</h2><p class="hint">Allocated FTE divided by capacity. Marks at 100% and 110%. Over-allocated people are shared across the troubled projects.</p><ul class="bars two" id="res"></ul></div>
+  </section>
+
+  <section class="card" aria-labelledby="r-h">
+    <h2 id="r-h">Executive attention</h2>
+    <p class="hint">Projects that meet the escalation rules, with the reasons. Summaries on this page are written by the rule-based writer; the full AI-written report is in the repository.</p>
+    <div id="esc" class="esc"></div>
+    <p class="links"><a href="https://github.com/Mrunali121/ai-portfolio-control-tower/blob/main/reports/executive-status-report-2026-10.md">Read the full AI-generated executive report</a> · <a href="https://github.com/Mrunali121/ai-portfolio-control-tower/blob/main/docs/risk-issue-register.md">Risk and issue register</a></p>
+  </section>
+
+  <section class="card note" role="note">
+    <strong>How the health score works.</strong>
+    <p>Schedule 30% (SPI) + Cost 30% (CPI) + Risk 15% (open risk exposure) + Issues 15% (open issues by severity) + Resources 10% (share of the team that is over-allocated). Green 75+, Amber 55-74, Red below 55. A project is escalated when it is Red, SPI &lt; 0.80, CPI &lt; 0.85, forecast slip &gt; 30 days, or a critical issue is open.</p>
+  </section>
+</main>
+<div class="tip" id="tip" role="tooltip" hidden></div>
+<script src="data.js"></script>
+<script src="dashboard.js"></script>
+</body>
+</html>

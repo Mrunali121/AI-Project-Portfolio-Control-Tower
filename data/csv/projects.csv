@@ -1,0 +1,16 @@
+project_id,project_name,department,project_manager,sponsor,methodology,start_date,planned_end_date,as_of_date,budget_eur,actual_cost_eur,actual_pct_complete,description
+P01,ERP Finance Migration,Finance,Lena Hartmann,CFO,Waterfall,2026-01-12,2026-12-18,2026-10-31,1800000,1250000,58,Replace the legacy general ledger with a cloud ERP finance module.
+P02,Customer Portal Relaunch,Customer Service,Anna Köhler,COO,Agile,2026-03-02,2027-01-29,2026-10-31,650000,450000,70,Rebuild the customer self-service portal with single sign-on.
+P03,HR Self-Service App,HR,Anna Köhler,CHRO,Agile,2026-04-06,2026-12-11,2026-10-31,320000,270000,80,"Mobile app for leave, payslips and time tracking."
+P04,Warehouse Management System Upgrade,Operations,Emre Yilmaz,COO,Hybrid,2026-02-02,2027-03-26,2026-10-31,1200000,690000,50,Upgrade the WMS to v9 and integrate handheld scanners.
+P05,Data Platform Modernisation,IT,Thomas Berger,CIO,Agile,2026-01-26,2027-02-26,2026-10-31,900000,640000,66,Central cloud data platform replacing departmental data marts.
+P06,Cyber Security Hardening,IT,Thomas Berger,CIO,Hybrid,2026-05-04,2026-12-18,2026-10-31,480000,370000,78,"Endpoint, identity and network hardening after the security audit."
+P07,CRM Rollout for Sales,Sales,Julia Neumann,CSO,Hybrid,2026-03-16,2026-12-04,2026-10-31,700000,560000,72,Roll out a new CRM to 140 sales users in four countries.
+P08,GDPR Compliance Programme,Legal,Nadine Roth,General Counsel,Waterfall,2026-02-23,2026-11-27,2026-10-31,260000,235000,90,Close gaps found in the data-protection audit before the regulator review.
+P09,Marketing Automation Platform,Marketing,Julia Neumann,CMO,Agile,2026-06-01,2027-02-12,2026-10-31,380000,215000,62,Campaign automation and lead scoring.
+P10,Predictive Maintenance Pilot,Operations,Emre Yilmaz,COO,Agile,2026-04-20,2027-01-15,2026-10-31,540000,330000,55,Sensor-based failure prediction pilot in two plants.
+P11,Intranet Replacement,HR,Anna Köhler,CHRO,Agile,2026-05-18,2026-11-20,2026-10-31,210000,190000,95,Replace the legacy intranet with a modern collaboration site.
+P12,Cloud Migration Wave 2,IT,Lena Hartmann,CIO,Waterfall,2026-03-23,2027-01-22,2026-10-31,1100000,760000,61,Move 40 business applications from the data centre to the cloud.
+P13,Finance Reporting Automation,Finance,Nadine Roth,CFO,Agile,2026-07-06,2027-01-29,2026-10-31,240000,140000,55,Automate monthly management reporting.
+P14,Customer Support Chatbot,Customer Service,Anna Köhler,COO,Agile,2026-06-15,2027-02-26,2026-10-31,420000,215000,40,LLM-based chatbot for first-line customer support.
+P15,Supplier Portal,Procurement,Julia Neumann,CFO,Hybrid,2026-04-13,2026-12-18,2026-10-31,350000,285000,78,Self-service portal for supplier onboarding and invoices.

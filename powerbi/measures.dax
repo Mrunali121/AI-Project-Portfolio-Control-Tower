@@ -1,0 +1,74 @@
+// =====================================================================
+// AI Project Portfolio Control Tower - DAX measures
+// Create a blank table called "_Measures" (Home > Enter data > name it, load),
+// then add each measure below via Modeling > New measure.
+// Tables used: project_metrics, monthly_trend, raid, resource_utilisation, allocations
+// =====================================================================
+
+// ---------- Earned value ----------
+Budget (BAC)        = SUM ( project_metrics[bac] )
+Planned Value (PV)  = SUM ( project_metrics[pv] )
+Earned Value (EV)   = SUM ( project_metrics[ev] )
+Actual Cost (AC)    = SUM ( project_metrics[ac] )
+Forecast Cost (EAC) = SUM ( project_metrics[eac] )
+
+SPI = DIVIDE ( [Earned Value (EV)], [Planned Value (PV)] )
+CPI = DIVIDE ( [Earned Value (EV)], [Actual Cost (AC)] )
+
+// ---------- Budget variance ----------
+Forecast Overrun EUR = [Forecast Cost (EAC)] - [Budget (BAC)]
+Forecast Overrun % = DIVIDE ( [Forecast Overrun EUR], [Budget (BAC)] )
+
+// ---------- Schedule variance ----------
+Avg Slip Days = AVERAGE ( project_metrics[slip_days] )
+Max Slip Days = MAX ( project_metrics[slip_days] )
+
+// ---------- Health ----------
+// Portfolio health is weighted by budget so that big projects count more.
+Avg Health Score =
+DIVIDE (
+    SUMX ( project_metrics, project_metrics[health_score] * project_metrics[bac] ),
+    [Budget (BAC)]
+)
+Red Projects   = CALCULATE ( COUNTROWS ( project_metrics ), project_metrics[rag] = "Red" )
+Amber Projects = CALCULATE ( COUNTROWS ( project_metrics ), project_metrics[rag] = "Amber" )
+Green Projects = CALCULATE ( COUNTROWS ( project_metrics ), project_metrics[rag] = "Green" )
+Projects Needing Escalation = CALCULATE ( COUNTROWS ( project_metrics ), project_metrics[escalate] = TRUE () )
+
+// Colour rule for conditional formatting (Format > Background colour > Field value)
+RAG Colour =
+SWITCH ( SELECTEDVALUE ( project_metrics[rag] ),
+    "Green", "#0CA30C",
+    "Amber", "#FAB219",
+    "Red",   "#D03B3B",
+    "#76766F" )
+
+// Always show text with the colour, never colour alone
+RAG Label =
+SWITCH ( SELECTEDVALUE ( project_metrics[rag] ),
+    "Green", "✓ Green", "Amber", "! Amber", "Red", "▲ Red", "" )
+
+// ---------- Risks and issues ----------
+Open RAID Items = CALCULATE ( COUNTROWS ( raid ), raid[status] <> "Closed" )
+Open Risks      = CALCULATE ( COUNTROWS ( raid ), raid[status] <> "Closed", raid[type] = "Risk" )
+Open Issues     = CALCULATE ( COUNTROWS ( raid ), raid[status] <> "Closed", raid[type] = "Issue" )
+Critical Issues = CALCULATE ( COUNTROWS ( raid ), raid[status] <> "Closed", raid[type] = "Issue", raid[impact] >= 5 )
+Risk Exposure =
+CALCULATE ( SUM ( raid[score] ), raid[status] <> "Closed", raid[type] IN { "Risk", "Dependency", "Assumption" } )
+High Score Items (>=15) = CALCULATE ( COUNTROWS ( raid ), raid[status] <> "Closed", raid[score] >= 15 )
+
+// ---------- Resources ----------
+Over-allocated People  = CALCULATE ( COUNTROWS ( resource_utilisation ), resource_utilisation[utilisation_pct] > 110 )
+Stretched People       = CALCULATE ( COUNTROWS ( resource_utilisation ), resource_utilisation[utilisation_pct] > 100, resource_utilisation[utilisation_pct] <= 110 )
+Avg Utilisation %      = AVERAGE ( resource_utilisation[utilisation_pct] ) / 100
+Allocated FTE          = SUM ( allocations[allocation_fte] )
+
+// ---------- Trend (use with monthly_trend[month_end] on the axis) ----------
+SPI Trend = DIVIDE ( SUM ( monthly_trend[ev] ), SUM ( monthly_trend[pv] ) )
+CPI Trend = DIVIDE ( SUM ( monthly_trend[ev] ), SUM ( monthly_trend[actual_cost_eur] ) )
+
+// ---------- Text for a card: executive headline ----------
+Headline =
+"Portfolio health " & FORMAT ( [Avg Health Score], "0" ) & "/100. " &
+[Red Projects] & " red, " & [Amber Projects] & " amber. Forecast overrun " &
+FORMAT ( [Forecast Overrun EUR] / 1000000, "0.00" ) & "M EUR (" & FORMAT ( [Forecast Overrun %], "0.0%" ) & ")."

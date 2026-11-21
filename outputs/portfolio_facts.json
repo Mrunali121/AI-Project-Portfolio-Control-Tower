@@ -1,0 +1,982 @@
+{
+  "summary": {
+    "as_of": "2026-10-31",
+    "projects": 15,
+    "total_budget_eur": 9550000.0,
+    "total_actual_cost_eur": 6600000.0,
+    "total_forecast_cost_eur": 10548580.2924178,
+    "forecast_overrun_eur": 998580.2924178,
+    "forecast_overrun_pct": 10.456338140500531,
+    "portfolio_spi": 0.8422159554688285,
+    "portfolio_cpi": 0.9147727272727273,
+    "avg_health_score": 66.8240837696335,
+    "rag_counts": {
+      "Green": 8,
+      "Amber": 5,
+      "Red": 2
+    },
+    "escalations": 6,
+    "overallocated_people": 6,
+    "stretched_people": 4
+  },
+  "projects": [
+    {
+      "project_id": "P01",
+      "name": "ERP Finance Migration",
+      "department": "Finance",
+      "manager": "Lena Hartmann",
+      "sponsor": "CFO",
+      "methodology": "Waterfall",
+      "planned_end": "2026-12-18",
+      "forecast_end": "2027-05-30",
+      "slip_days": 163,
+      "budget_eur": 1800000,
+      "actual_cost_eur": 1250000,
+      "forecast_cost_eur": 2155000,
+      "forecast_overrun_eur": 355000,
+      "forecast_overrun_pct": 19.7,
+      "planned_pct": 85.9,
+      "actual_pct": 58.0,
+      "spi": 0.68,
+      "cpi": 0.84,
+      "health_score": 43,
+      "rag": "Red",
+      "escalate": true,
+      "escalation_reasons": [
+        "health score 43 is in the Red band",
+        "SPI 0.68 is below 0.8",
+        "CPI 0.84 is below 0.85",
+        "a critical issue is open",
+        "forecast slip of 163 days exceeds 30"
+      ],
+      "open_risks": 2,
+      "open_issues": 1,
+      "top_items": [
+        {
+          "id": "RAID-001",
+          "type": "Issue",
+          "title": "Ledger data migration fails reconciliation",
+          "score": 25,
+          "owner": "Lena Hartmann",
+          "status": "Escalated",
+          "response": "Dedicated data-cleansing squad; reconciliation rules agreed with Finance; steering committee decision on a third trial load."
+        },
+        {
+          "id": "RAID-002",
+          "type": "Risk",
+          "title": "Year-end close overlaps with cut-over window",
+          "score": 20,
+          "owner": "Lena Hartmann",
+          "status": "Open",
+          "response": "Negotiate cut-over after the close or split go-live into two phases."
+        },
+        {
+          "id": "RAID-003",
+          "type": "Risk",
+          "title": "ERP consultant contract ends in December",
+          "score": 16,
+          "owner": "Lena Hartmann",
+          "status": "Mitigating",
+          "response": "Extension quotation requested; knowledge-transfer sessions scheduled."
+        }
+      ],
+      "overallocated_team": [
+        {
+          "name": "Lena Hartmann",
+          "utilisation_pct": 110
+        },
+        {
+          "name": "Tobias Weiss",
+          "utilisation_pct": 110
+        },
+        {
+          "name": "Jonas Keller",
+          "utilisation_pct": 140
+        },
+        {
+          "name": "Daniel Okafor",
+          "utilisation_pct": 110
+        }
+      ]
+    },
+    {
+      "project_id": "P14",
+      "name": "Customer Support Chatbot",
+      "department": "Customer Service",
+      "manager": "Anna Köhler",
+      "sponsor": "COO",
+      "methodology": "Agile",
+      "planned_end": "2027-02-26",
+      "forecast_end": "2027-05-26",
+      "slip_days": 89,
+      "budget_eur": 420000,
+      "actual_cost_eur": 215000,
+      "forecast_cost_eur": 538000,
+      "forecast_overrun_eur": 118000,
+      "forecast_overrun_pct": 28.0,
+      "planned_pct": 53.9,
+      "actual_pct": 40.0,
+      "spi": 0.74,
+      "cpi": 0.78,
+      "health_score": 50,
+      "rag": "Red",
+      "escalate": true,
+      "escalation_reasons": [
+        "health score 50 is in the Red band",
+        "SPI 0.74 is below 0.8",
+        "CPI 0.78 is below 0.85",
+        "forecast slip of 89 days exceeds 30"
+      ],
+      "open_risks": 2,
+      "open_issues": 2,
+      "top_items": [
+        {
+          "id": "RAID-039",
+          "type": "Issue",
+          "title": "Answer accuracy below target",
+          "score": 20,
+          "owner": "Anna Köhler",
+          "status": "Escalated",
+          "response": "Improve retrieval and prompt design; limit scope to top-20 intents."
+        },
+        {
+          "id": "RAID-040",
+          "type": "Issue",
+          "title": "LLM usage costs above forecast",
+          "score": 20,
+          "owner": "Karim Aziz",
+          "status": "Open",
+          "response": "Response caching and model tiering; cost cap per conversation."
+        },
+        {
+          "id": "RAID-041",
+          "type": "Risk",
+          "title": "Scope creep: voice channel",
+          "score": 20,
+          "owner": "Anna Köhler",
+          "status": "Open",
+          "response": "Route through change control; defer to phase 2."
+        }
+      ],
+      "overallocated_team": [
+        {
+          "name": "Daniel Okafor",
+          "utilisation_pct": 110
+        },
+        {
+          "name": "Hannah Vogel",
+          "utilisation_pct": 120
+        },
+        {
+          "name": "Anna Köhler",
+          "utilisation_pct": 150
+        }
+      ]
+    },
+    {
+      "project_id": "P04",
+      "name": "Warehouse Management System Upgrade",
+      "department": "Operations",
+      "manager": "Emre Yilmaz",
+      "sponsor": "COO",
+      "methodology": "Hybrid",
+      "planned_end": "2027-03-26",
+      "forecast_end": "2027-07-29",
+      "slip_days": 125,
+      "budget_eur": 1200000,
+      "actual_cost_eur": 690000,
+      "forecast_cost_eur": 1380000,
+      "forecast_overrun_eur": 180000,
+      "forecast_overrun_pct": 15.0,
+      "planned_pct": 65.0,
+      "actual_pct": 50.0,
+      "spi": 0.77,
+      "cpi": 0.87,
+      "health_score": 56,
+      "rag": "Amber",
+      "escalate": true,
+      "escalation_reasons": [
+        "SPI 0.77 is below 0.8",
+        "forecast slip of 125 days exceeds 30"
+      ],
+      "open_risks": 2,
+      "open_issues": 1,
+      "top_items": [
+        {
+          "id": "RAID-010",
+          "type": "Issue",
+          "title": "Scanner firmware incompatible with WMS v9",
+          "score": 20,
+          "owner": "Emre Yilmaz",
+          "status": "Open",
+          "response": "Vendor escalation; interim workaround with older scanner profile."
+        },
+        {
+          "id": "RAID-011",
+          "type": "Risk",
+          "title": "DBA over-allocation delays schema migration",
+          "score": 16,
+          "owner": "Emre Yilmaz",
+          "status": "Open",
+          "response": "Request contractor DBA for 3 months; re-prioritise portfolio DBA time."
+        },
+        {
+          "id": "RAID-012",
+          "type": "Risk",
+          "title": "Cut-over during Q1 stock-take",
+          "score": 15,
+          "owner": "Emre Yilmaz",
+          "status": "Open",
+          "response": "Move go-live to mid-February or run a parallel pilot site first."
+        }
+      ],
+      "overallocated_team": [
+        {
+          "name": "Jonas Keller",
+          "utilisation_pct": 140
+        },
+        {
+          "name": "Daniel Okafor",
+          "utilisation_pct": 110
+        },
+        {
+          "name": "Marco Rossi",
+          "utilisation_pct": 120
+        }
+      ]
+    },
+    {
+      "project_id": "P12",
+      "name": "Cloud Migration Wave 2",
+      "department": "IT",
+      "manager": "Lena Hartmann",
+      "sponsor": "CIO",
+      "methodology": "Waterfall",
+      "planned_end": "2027-01-22",
+      "forecast_end": "2027-03-22",
+      "slip_days": 59,
+      "budget_eur": 1100000,
+      "actual_cost_eur": 760000,
+      "forecast_cost_eur": 1246000,
+      "forecast_overrun_eur": 146000,
+      "forecast_overrun_pct": 13.3,
+      "planned_pct": 72.8,
+      "actual_pct": 61.0,
+      "spi": 0.84,
+      "cpi": 0.88,
+      "health_score": 60,
+      "rag": "Amber",
+      "escalate": true,
+      "escalation_reasons": [
+        "forecast slip of 59 days exceeds 30"
+      ],
+      "open_risks": 2,
+      "open_issues": 1,
+      "top_items": [
+        {
+          "id": "RAID-033",
+          "type": "Issue",
+          "title": "Network latency above SLA",
+          "score": 20,
+          "owner": "Leon Wagner",
+          "status": "Open",
+          "response": "Dedicated connection upgrade ordered; delivery in 4 weeks."
+        },
+        {
+          "id": "RAID-034",
+          "type": "Risk",
+          "title": "Cut-over collides with month-end",
+          "score": 20,
+          "owner": "Lena Hartmann",
+          "status": "Open",
+          "response": "Move cut-over by one week; confirm with Finance."
+        },
+        {
+          "id": "RAID-035",
+          "type": "Risk",
+          "title": "Cloud architect over-allocated",
+          "score": 16,
+          "owner": "Lena Hartmann",
+          "status": "Open",
+          "response": "Backfill with contractor; defer design reviews on P05."
+        }
+      ],
+      "overallocated_team": [
+        {
+          "name": "Lena Hartmann",
+          "utilisation_pct": 110
+        },
+        {
+          "name": "Jonas Keller",
+          "utilisation_pct": 140
+        },
+        {
+          "name": "Sofia Lindqvist",
+          "utilisation_pct": 120
+        },
+        {
+          "name": "Aylin Demir",
+          "utilisation_pct": 110
+        }
+      ]
+    },
+    {
+      "project_id": "P07",
+      "name": "CRM Rollout for Sales",
+      "department": "Sales",
+      "manager": "Julia Neumann",
+      "sponsor": "CSO",
+      "methodology": "Hybrid",
+      "planned_end": "2026-12-04",
+      "forecast_end": "2027-01-28",
+      "slip_days": 55,
+      "budget_eur": 700000,
+      "actual_cost_eur": 560000,
+      "forecast_cost_eur": 778000,
+      "forecast_overrun_eur": 78000,
+      "forecast_overrun_pct": 11.1,
+      "planned_pct": 87.1,
+      "actual_pct": 72.0,
+      "spi": 0.83,
+      "cpi": 0.9,
+      "health_score": 63,
+      "rag": "Amber",
+      "escalate": true,
+      "escalation_reasons": [
+        "forecast slip of 55 days exceeds 30"
+      ],
+      "open_risks": 2,
+      "open_issues": 1,
+      "top_items": [
+        {
+          "id": "RAID-019",
+          "type": "Issue",
+          "title": "Low sales-team adoption",
+          "score": 20,
+          "owner": "Julia Neumann",
+          "status": "Escalated",
+          "response": "Sales directors to mandate attendance; add regional super-users."
+        },
+        {
+          "id": "RAID-020",
+          "type": "Risk",
+          "title": "Q4 quota season limits UAT availability",
+          "score": 16,
+          "owner": "Julia Neumann",
+          "status": "Open",
+          "response": "Shorten UAT scope to critical flows; evening sessions."
+        },
+        {
+          "id": "RAID-021",
+          "type": "Risk",
+          "title": "ERP integration delayed by P01",
+          "score": 12,
+          "owner": "Marco Rossi",
+          "status": "Open",
+          "response": "Define interim file-based interface."
+        }
+      ],
+      "overallocated_team": [
+        {
+          "name": "Tobias Weiss",
+          "utilisation_pct": 110
+        },
+        {
+          "name": "Daniel Okafor",
+          "utilisation_pct": 110
+        },
+        {
+          "name": "Marco Rossi",
+          "utilisation_pct": 120
+        }
+      ]
+    },
+    {
+      "project_id": "P10",
+      "name": "Predictive Maintenance Pilot",
+      "department": "Operations",
+      "manager": "Emre Yilmaz",
+      "sponsor": "COO",
+      "methodology": "Agile",
+      "planned_end": "2027-01-15",
+      "forecast_end": "2027-04-08",
+      "slip_days": 83,
+      "budget_eur": 540000,
+      "actual_cost_eur": 330000,
+      "forecast_cost_eur": 600000,
+      "forecast_overrun_eur": 60000,
+      "forecast_overrun_pct": 11.1,
+      "planned_pct": 71.9,
+      "actual_pct": 55.0,
+      "spi": 0.77,
+      "cpi": 0.9,
+      "health_score": 68,
+      "rag": "Amber",
+      "escalate": true,
+      "escalation_reasons": [
+        "SPI 0.77 is below 0.8",
+        "forecast slip of 83 days exceeds 30"
+      ],
+      "open_risks": 1,
+      "open_issues": 1,
+      "top_items": [
+        {
+          "id": "RAID-028",
+          "type": "Issue",
+          "title": "Sensor delivery slipped six weeks",
+          "score": 20,
+          "owner": "Emre Yilmaz",
+          "status": "Escalated",
+          "response": "Sponsor escalation to the vendor; pilot plant 2 re-sequenced."
+        },
+        {
+          "id": "RAID-029",
+          "type": "Risk",
+          "title": "Pilot data quality too low for modelling",
+          "score": 12,
+          "owner": "Clara Fischer",
+          "status": "Mitigating",
+          "response": "Add buffering at the edge; synthetic augmentation test."
+        },
+        {
+          "id": "RAID-030",
+          "type": "Assumption",
+          "title": "Maintenance team available for pilot",
+          "score": 9,
+          "owner": "Emre Yilmaz",
+          "status": "Open",
+          "response": "Agree roster with plant managers."
+        }
+      ],
+      "overallocated_team": [
+        {
+          "name": "Ivan Petrov",
+          "utilisation_pct": 120
+        }
+      ]
+    },
+    {
+      "project_id": "P05",
+      "name": "Data Platform Modernisation",
+      "department": "IT",
+      "manager": "Thomas Berger",
+      "sponsor": "CIO",
+      "methodology": "Agile",
+      "planned_end": "2027-02-26",
+      "forecast_end": "2027-03-23",
+      "slip_days": 25,
+      "budget_eur": 900000,
+      "actual_cost_eur": 640000,
+      "forecast_cost_eur": 970000,
+      "forecast_overrun_eur": 70000,
+      "forecast_overrun_pct": 7.7,
+      "planned_pct": 70.2,
+      "actual_pct": 66.0,
+      "spi": 0.94,
+      "cpi": 0.93,
+      "health_score": 72,
+      "rag": "Amber",
+      "escalate": false,
+      "escalation_reasons": [],
+      "open_risks": 2,
+      "open_issues": 0,
+      "top_items": [
+        {
+          "id": "RAID-014",
+          "type": "Risk",
+          "title": "Source-system owners delay data extracts",
+          "score": 12,
+          "owner": "Thomas Berger",
+          "status": "Mitigating",
+          "response": "Sponsor letter sent; extract workshop booked."
+        },
+        {
+          "id": "RAID-016",
+          "type": "Dependency",
+          "title": "Cloud landing zone from P12",
+          "score": 12,
+          "owner": "Sofia Lindqvist",
+          "status": "Open",
+          "response": "Joint milestone plan with P12."
+        },
+        {
+          "id": "RAID-015",
+          "type": "Risk",
+          "title": "Cloud run-cost above forecast",
+          "score": 9,
+          "owner": "Ivan Petrov",
+          "status": "Mitigating",
+          "response": "Introduce cost alerts and partitioning review."
+        }
+      ],
+      "overallocated_team": [
+        {
+          "name": "Lena Hartmann",
+          "utilisation_pct": 110
+        },
+        {
+          "name": "Jonas Keller",
+          "utilisation_pct": 140
+        },
+        {
+          "name": "Sofia Lindqvist",
+          "utilisation_pct": 120
+        },
+        {
+          "name": "Ivan Petrov",
+          "utilisation_pct": 120
+        }
+      ]
+    },
+    {
+      "project_id": "P15",
+      "name": "Supplier Portal",
+      "department": "Procurement",
+      "manager": "Julia Neumann",
+      "sponsor": "CFO",
+      "methodology": "Hybrid",
+      "planned_end": "2026-12-18",
+      "forecast_end": "2026-12-27",
+      "slip_days": 9,
+      "budget_eur": 350000,
+      "actual_cost_eur": 285000,
+      "forecast_cost_eur": 365000,
+      "forecast_overrun_eur": 15000,
+      "forecast_overrun_pct": 4.4,
+      "planned_pct": 80.7,
+      "actual_pct": 78.0,
+      "spi": 0.97,
+      "cpi": 0.96,
+      "health_score": 84,
+      "rag": "Green",
+      "escalate": false,
+      "escalation_reasons": [],
+      "open_risks": 1,
+      "open_issues": 0,
+      "top_items": [
+        {
+          "id": "RAID-044",
+          "type": "Dependency",
+          "title": "Vendor master data from P01",
+          "score": 9,
+          "owner": "Julia Neumann",
+          "status": "Open",
+          "response": "Interim extract from legacy system."
+        },
+        {
+          "id": "RAID-043",
+          "type": "Risk",
+          "title": "Supplier onboarding adoption",
+          "score": 6,
+          "owner": "Julia Neumann",
+          "status": "Open",
+          "response": "Onboarding webinars; paper fallback for 6 months."
+        }
+      ],
+      "overallocated_team": [
+        {
+          "name": "Aylin Demir",
+          "utilisation_pct": 110
+        },
+        {
+          "name": "Marco Rossi",
+          "utilisation_pct": 120
+        }
+      ]
+    },
+    {
+      "project_id": "P02",
+      "name": "Customer Portal Relaunch",
+      "department": "Customer Service",
+      "manager": "Anna Köhler",
+      "sponsor": "COO",
+      "methodology": "Agile",
+      "planned_end": "2027-01-29",
+      "forecast_end": "2027-02-12",
+      "slip_days": 14,
+      "budget_eur": 650000,
+      "actual_cost_eur": 450000,
+      "forecast_cost_eur": 643000,
+      "forecast_overrun_eur": -7000,
+      "forecast_overrun_pct": -1.1,
+      "planned_pct": 73.0,
+      "actual_pct": 70.0,
+      "spi": 0.96,
+      "cpi": 1.01,
+      "health_score": 89,
+      "rag": "Green",
+      "escalate": false,
+      "escalation_reasons": [],
+      "open_risks": 1,
+      "open_issues": 0,
+      "top_items": [
+        {
+          "id": "RAID-006",
+          "type": "Risk",
+          "title": "Peak-season load testing starts late",
+          "score": 6,
+          "owner": "Anna Köhler",
+          "status": "Open",
+          "response": "Bring forward performance test environment booking."
+        },
+        {
+          "id": "RAID-007",
+          "type": "Assumption",
+          "title": "SSO provider API stays stable",
+          "score": 6,
+          "owner": "Felix Brandt",
+          "status": "Open",
+          "response": "Confirm roadmap with the provider each quarter."
+        }
+      ],
+      "overallocated_team": [
+        {
+          "name": "Hannah Vogel",
+          "utilisation_pct": 120
+        },
+        {
+          "name": "Anna Köhler",
+          "utilisation_pct": 150
+        }
+      ]
+    },
+    {
+      "project_id": "P06",
+      "name": "Cyber Security Hardening",
+      "department": "IT",
+      "manager": "Thomas Berger",
+      "sponsor": "CIO",
+      "methodology": "Hybrid",
+      "planned_end": "2026-12-18",
+      "forecast_end": "2026-12-21",
+      "slip_days": 3,
+      "budget_eur": 480000,
+      "actual_cost_eur": 370000,
+      "forecast_cost_eur": 474000,
+      "forecast_overrun_eur": -6000,
+      "forecast_overrun_pct": -1.2,
+      "planned_pct": 78.9,
+      "actual_pct": 78.0,
+      "spi": 0.99,
+      "cpi": 1.01,
+      "health_score": 89,
+      "rag": "Green",
+      "escalate": false,
+      "escalation_reasons": [],
+      "open_risks": 1,
+      "open_issues": 0,
+      "top_items": [
+        {
+          "id": "RAID-017",
+          "type": "Risk",
+          "title": "Pen-test findings exceed remediation capacity",
+          "score": 8,
+          "owner": "Thomas Berger",
+          "status": "Open",
+          "response": "Risk-rank findings; agree acceptance criteria for low severity."
+        }
+      ],
+      "overallocated_team": [
+        {
+          "name": "Sofia Lindqvist",
+          "utilisation_pct": 120
+        },
+        {
+          "name": "Aylin Demir",
+          "utilisation_pct": 110
+        }
+      ]
+    },
+    {
+      "project_id": "P03",
+      "name": "HR Self-Service App",
+      "department": "HR",
+      "manager": "Anna Köhler",
+      "sponsor": "CHRO",
+      "methodology": "Agile",
+      "planned_end": "2026-12-11",
+      "forecast_end": "2026-12-22",
+      "slip_days": 11,
+      "budget_eur": 320000,
+      "actual_cost_eur": 270000,
+      "forecast_cost_eur": 338000,
+      "forecast_overrun_eur": 18000,
+      "forecast_overrun_pct": 5.5,
+      "planned_pct": 83.5,
+      "actual_pct": 80.0,
+      "spi": 0.96,
+      "cpi": 0.95,
+      "health_score": 89,
+      "rag": "Green",
+      "escalate": false,
+      "escalation_reasons": [],
+      "open_risks": 1,
+      "open_issues": 0,
+      "top_items": [
+        {
+          "id": "RAID-008",
+          "type": "Risk",
+          "title": "Works council approval for time tracking",
+          "score": 9,
+          "owner": "Anna Köhler",
+          "status": "Mitigating",
+          "response": "Early workshop held; approval meeting set for 18 Nov."
+        }
+      ],
+      "overallocated_team": [
+        {
+          "name": "Hannah Vogel",
+          "utilisation_pct": 120
+        },
+        {
+          "name": "Anna Köhler",
+          "utilisation_pct": 150
+        }
+      ]
+    },
+    {
+      "project_id": "P13",
+      "name": "Finance Reporting Automation",
+      "department": "Finance",
+      "manager": "Nadine Roth",
+      "sponsor": "CFO",
+      "methodology": "Agile",
+      "planned_end": "2027-01-29",
+      "forecast_end": "2027-02-04",
+      "slip_days": 6,
+      "budget_eur": 240000,
+      "actual_cost_eur": 140000,
+      "forecast_cost_eur": 255000,
+      "forecast_overrun_eur": 15000,
+      "forecast_overrun_pct": 6.1,
+      "planned_pct": 56.5,
+      "actual_pct": 55.0,
+      "spi": 0.97,
+      "cpi": 0.94,
+      "health_score": 91,
+      "rag": "Green",
+      "escalate": false,
+      "escalation_reasons": [],
+      "open_risks": 1,
+      "open_issues": 0,
+      "top_items": [
+        {
+          "id": "RAID-037",
+          "type": "Risk",
+          "title": "ERP source data changes after P01 go-live",
+          "score": 9,
+          "owner": "Eva Maier",
+          "status": "Open",
+          "response": "Isolate source mappings in a configuration layer."
+        },
+        {
+          "id": "RAID-038",
+          "type": "Assumption",
+          "title": "Finance users can attend design workshops",
+          "score": 4,
+          "owner": "Nadine Roth",
+          "status": "Open",
+          "response": "Review after month-end."
+        }
+      ],
+      "overallocated_team": []
+    },
+    {
+      "project_id": "P08",
+      "name": "GDPR Compliance Programme",
+      "department": "Legal",
+      "manager": "Nadine Roth",
+      "sponsor": "General Counsel",
+      "methodology": "Waterfall",
+      "planned_end": "2026-11-27",
+      "forecast_end": "2026-11-28",
+      "slip_days": 1,
+      "budget_eur": 260000,
+      "actual_cost_eur": 235000,
+      "forecast_cost_eur": 261000,
+      "forecast_overrun_eur": 1000,
+      "forecast_overrun_pct": 0.4,
+      "planned_pct": 90.3,
+      "actual_pct": 90.0,
+      "spi": 1.0,
+      "cpi": 1.0,
+      "health_score": 94,
+      "rag": "Green",
+      "escalate": false,
+      "escalation_reasons": [],
+      "open_risks": 1,
+      "open_issues": 1,
+      "top_items": [
+        {
+          "id": "RAID-024",
+          "type": "Issue",
+          "title": "Missing data-processing agreements",
+          "score": 15,
+          "owner": "Sara Haddad",
+          "status": "Open",
+          "response": "Procurement to apply payment hold on unsigned suppliers."
+        },
+        {
+          "id": "RAID-023",
+          "type": "Risk",
+          "title": "Regulator review date is fixed",
+          "score": 10,
+          "owner": "Nadine Roth",
+          "status": "Mitigating",
+          "response": "Evidence pack 80% complete; mock review planned for 30 Nov."
+        },
+        {
+          "id": "RAID-025",
+          "type": "Assumption",
+          "title": "Audit scope stays unchanged",
+          "score": 6,
+          "owner": "Sara Haddad",
+          "status": "Open",
+          "response": "Confirm scope in writing with the regulator."
+        }
+      ],
+      "overallocated_team": []
+    },
+    {
+      "project_id": "P11",
+      "name": "Intranet Replacement",
+      "department": "HR",
+      "manager": "Anna Köhler",
+      "sponsor": "CHRO",
+      "methodology": "Agile",
+      "planned_end": "2026-11-20",
+      "forecast_end": "2026-11-20",
+      "slip_days": 0,
+      "budget_eur": 210000,
+      "actual_cost_eur": 190000,
+      "forecast_cost_eur": 200000,
+      "forecast_overrun_eur": -10000,
+      "forecast_overrun_pct": -4.8,
+      "planned_pct": 89.2,
+      "actual_pct": 95.0,
+      "spi": 1.06,
+      "cpi": 1.05,
+      "health_score": 94,
+      "rag": "Green",
+      "escalate": false,
+      "escalation_reasons": [],
+      "open_risks": 1,
+      "open_issues": 1,
+      "top_items": [
+        {
+          "id": "RAID-031",
+          "type": "Issue",
+          "title": "Search relevance tuning",
+          "score": 10,
+          "owner": "Anna Köhler",
+          "status": "Mitigating",
+          "response": "Synonym list and boosting rules in progress."
+        },
+        {
+          "id": "RAID-032",
+          "type": "Risk",
+          "title": "Low early adoption",
+          "score": 4,
+          "owner": "Paul Richter",
+          "status": "Open",
+          "response": "Redirect old URLs; communication plan."
+        }
+      ],
+      "overallocated_team": [
+        {
+          "name": "Hannah Vogel",
+          "utilisation_pct": 120
+        },
+        {
+          "name": "Anna Köhler",
+          "utilisation_pct": 150
+        }
+      ]
+    },
+    {
+      "project_id": "P09",
+      "name": "Marketing Automation Platform",
+      "department": "Marketing",
+      "manager": "Julia Neumann",
+      "sponsor": "CMO",
+      "methodology": "Agile",
+      "planned_end": "2027-02-12",
+      "forecast_end": "2027-02-12",
+      "slip_days": 0,
+      "budget_eur": 380000,
+      "actual_cost_eur": 215000,
+      "forecast_cost_eur": 347000,
+      "forecast_overrun_eur": -33000,
+      "forecast_overrun_pct": -8.7,
+      "planned_pct": 59.4,
+      "actual_pct": 62.0,
+      "spi": 1.04,
+      "cpi": 1.1,
+      "health_score": 96,
+      "rag": "Green",
+      "escalate": false,
+      "escalation_reasons": [],
+      "open_risks": 1,
+      "open_issues": 0,
+      "top_items": [
+        {
+          "id": "RAID-027",
+          "type": "Dependency",
+          "title": "Clean contact data from P07",
+          "score": 9,
+          "owner": "Mia Becker",
+          "status": "Open",
+          "response": "Interim data-cleansing script as a fallback."
+        },
+        {
+          "id": "RAID-026",
+          "type": "Risk",
+          "title": "Agency contract renewal",
+          "score": 4,
+          "owner": "Julia Neumann",
+          "status": "Open",
+          "response": "Start renewal discussion in November."
+        }
+      ],
+      "overallocated_team": []
+    }
+  ],
+  "resource_conflicts": [
+    {
+      "name": "Anna Köhler",
+      "role": "Project Manager",
+      "utilisation_pct": 150,
+      "projects": 4
+    },
+    {
+      "name": "Jonas Keller",
+      "role": "Database Administrator",
+      "utilisation_pct": 140,
+      "projects": 4
+    },
+    {
+      "name": "Sofia Lindqvist",
+      "role": "Cloud Architect",
+      "utilisation_pct": 120,
+      "projects": 3
+    },
+    {
+      "name": "Marco Rossi",
+      "role": "Integration Engineer",
+      "utilisation_pct": 120,
+      "projects": 3
+    },
+    {
+      "name": "Hannah Vogel",
+      "role": "UX Designer",
+      "utilisation_pct": 120,
+      "projects": 4
+    },
+    {
+      "name": "Ivan Petrov",
+      "role": "Data Engineer",
+      "utilisation_pct": 120,
+      "projects": 2
+    }
+  ]
+}
